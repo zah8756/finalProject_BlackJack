@@ -13,6 +13,10 @@
 		FD414BFE2264447A007A3681 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD414BFD2264447A007A3681 /* Assets.xcassets */; };
 		FD414C012264447A007A3681 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD414BFF2264447A007A3681 /* LaunchScreen.storyboard */; };
 		FD414C0C2264447B007A3681 /* finalProject_BlackJackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD414C0B2264447B007A3681 /* finalProject_BlackJackTests.swift */; };
+		FD414C6122653718007A3681 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD414C6022653718007A3681 /* Card.swift */; };
+		FDD629EE227536A1008D59FF /* myAppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD629ED227536A1008D59FF /* myAppData.swift */; };
+		FDD629F022753D82008D59FF /* bankBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD629EF22753D82008D59FF /* bankBrain.swift */; };
+		FDD629F3227A6D2F008D59FF /* imageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD629F2227A6D2F008D59FF /* imageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		FD414C072264447B007A3681 /* finalProject_BlackJackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = finalProject_BlackJackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD414C0B2264447B007A3681 /* finalProject_BlackJackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalProject_BlackJackTests.swift; sourceTree = "<group>"; };
 		FD414C0D2264447B007A3681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD414C6022653718007A3681 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FDD629ED227536A1008D59FF /* myAppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAppData.swift; sourceTree = "<group>"; };
+		FDD629EF22753D82008D59FF /* bankBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankBrain.swift; sourceTree = "<group>"; };
+		FDD629F2227A6D2F008D59FF /* imageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,10 @@
 		FD414BF522644479007A3681 /* finalProject_BlackJack */ = {
 			isa = PBXGroup;
 			children = (
+				FDD629EC2275367D008D59FF /* model */,
+				FDD629EB2275361E008D59FF /* VC */,
+				FDD629F1227A6D15008D59FF /* helper */,
 				FD414BF622644479007A3681 /* AppDelegate.swift */,
-				FD414BF822644479007A3681 /* ViewController.swift */,
 				FD414BFA22644479007A3681 /* Main.storyboard */,
 				FD414BFD2264447A007A3681 /* Assets.xcassets */,
 				FD414BFF2264447A007A3681 /* LaunchScreen.storyboard */,
@@ -94,6 +104,32 @@
 				FD414C0D2264447B007A3681 /* Info.plist */,
 			);
 			path = finalProject_BlackJackTests;
+			sourceTree = "<group>";
+		};
+		FDD629EB2275361E008D59FF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				FD414BF822644479007A3681 /* ViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		FDD629EC2275367D008D59FF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FDD629ED227536A1008D59FF /* myAppData.swift */,
+				FD414C6022653718007A3681 /* Card.swift */,
+				FDD629EF22753D82008D59FF /* bankBrain.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FDD629F1227A6D15008D59FF /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				FDD629F2227A6D2F008D59FF /* imageHelper.swift */,
+			);
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD414BF922644479007A3681 /* ViewController.swift in Sources */,
+				FDD629F022753D82008D59FF /* bankBrain.swift in Sources */,
+				FD414C6122653718007A3681 /* Card.swift in Sources */,
+				FDD629F3227A6D2F008D59FF /* imageHelper.swift in Sources */,
 				FD414BF722644479007A3681 /* AppDelegate.swift in Sources */,
+				FDD629EE227536A1008D59FF /* myAppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,15 +401,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6H7V5HHDM;
 				INFOPLIST_FILE = finalProject_BlackJack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Harwoodz.finalProject-BlackJack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -378,15 +420,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6H7V5HHDM;
 				INFOPLIST_FILE = finalProject_BlackJack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Harwoodz.finalProject-BlackJack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

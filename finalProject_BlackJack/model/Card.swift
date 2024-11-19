@@ -8,10 +8,13 @@
 
 import UIKit
 
+//this sctruct is used to create the back bone of my cards 
+
 struct Card {
     
     let rank : Rank?
     let suit : Suit?
+    var image : UIImage?
    
     enum Rank:Int{
         case two = 2
@@ -32,7 +35,7 @@ struct Card {
             case .Jack: return 10
             case .Queen: return 10
             case .King: return 10
-            case .Ace: return 11 //you will need to create a function which checks so you could posibly change 11 to 1
+            case .Ace: return 11 
             default: return Int(self.rawValue)
             }
         }
